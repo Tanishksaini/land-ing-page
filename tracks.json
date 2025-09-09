@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "healthcare-ai",
+    "heading": "Healthcare & AI",
+    "subHeading": "Reimagining Healthcare through Artificial Intelligence",
+    "description": "From predictive diagnostics to mental health bots and robotic surgeries, AI is transforming healthcare delivery. This track explores affordable and scalable AI solutions for India’s healthcare challenges.",
+    "speakers": ["Dr. Arjun Desai (Qure.ai)", "Meena Ganesh (Portea Medical)", "Rajat Garg (Dozee)"],
+    "startup": "HealthifyMe, Dozee, Qure.ai, PhableCare",
+    "investors": ["Pharma Corporates", "HealthTech VCs", "Hospitals / MedTech Companies"],
+    "icon": "fa-heart-pulse"
+  },
+  {
+    "slug": "governance-ai",
+    "heading": "Governance & AI",
+    "subHeading": "Building Smarter Governance with AI",
+    "description": "Governance is data. AI enables governments to make faster, transparent, and citizen-friendly decisions.",
+    "speakers": ["Amitabh Kant (NITI Aayog)", "Rohini Srivathsa (Microsoft India)", "Ravi Sharma (Staqu)"],
+    "startup": "Staqu, CivicDataLab, GreyB",
+    "investors": ["Tech Mahindra", "PwC India", "Rajasthan Govt"],
+    "icon": "fa-landmark"
+  },
+  {
+    "slug": "startups-ai",
+    "heading": "Innovative Startups in AI",
+    "subHeading": "Showcasing India’s AI Startup Revolution",
+    "description": "India’s startup ecosystem is buzzing with AI-driven innovation. This track brings the best AI startups on stage to pitch, demo, and scale.",
+    "speakers": ["Kriti Sharma (AI for Good)", "Manohar Reddy (HyperVerge)", "Ritu Verma (Ankur Capital)"],
+    "startup": "HyperVerge, Observe.ai, Mad Street Den, Yellow.ai",
+    "investors": ["Accel", "Sequoia", "Google for Startups", "AWS Activate"],
+    "icon": "fa-rocket"
+  },
+  {
+    "slug": "smartcities-ai",
+    "heading": "Smart Cities & Better Living with AI",
+    "subHeading": "Designing Future-Ready Cities",
+    "description": "AI is at the heart of India’s urban transformation — powering traffic systems, energy grids, water utilities, and safe city projects.",
+    "speakers": ["Kunal Kumar (Smart Cities Mission)", "Anirudh Sharma (Graviky Labs)", "Nivruti Rai (Intel India)"],
+    "startup": "Chalo, Aurassure, NoBrokerHood, Zenatix",
+    "investors": ["Adani", "Honeywell", "Urban Dev Dept"],
+    "icon": "fa-city"
+  }
+]

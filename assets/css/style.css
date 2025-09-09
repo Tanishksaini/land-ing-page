@@ -244,7 +244,7 @@ video.intro-video {
     border-radius: 10px;
 }
 #logo-img {
-  height: 60px;             /* Control logo size */
+  height: 48px;             /* Control logo size */
   width: auto;
   object-fit: contain;
   display: block
@@ -2838,7 +2838,7 @@ textarea.form-control.is-invalid {
 
 .vs-btn {
     background-color: #182263;
-    background-image: linear-gradient(to right, #182263, #182263, #182263, #182263);
+    background-image: linear-gradient(to right, #5c1011, #651819, #182263, #182263);
     background-size: 300% 100%;
     /*-webkit-box-shadow: 0px 11px 21px 0px rgba(240, 64, 27, 0.31);
   box-shadow: 0px 11px 21px 0px rgba(240, 64, 27, 0.31);*/
@@ -2876,7 +2876,7 @@ textarea.form-control.is-invalid {
 }
 
 .vs-btn.btn-white {
-    background-color: #182263;
+    background-color: linear-gradient(to right, #5c1011, #651819, #182263, #182263);
     color: #ffffff;
     background-image: none;
     -webkit-box-shadow: none;
@@ -3147,7 +3147,7 @@ textarea.form-control.is-invalid {
     --icon-size: 55px;
     position: relative;
     display: inline-block;
-    color: #182263;
+    color:  #182263;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 14px;
@@ -3155,7 +3155,7 @@ textarea.form-control.is-invalid {
 }
 
 .video-btn>i {
-    background: linear-gradient(to right, #ed4567 0%, #d02c40 100%);
+    background: #182263;
     color: var(--white-color);
     width: var(--icon-size);
     height: var(--icon-size);
@@ -3172,7 +3172,7 @@ textarea.form-control.is-invalid {
 .video-btn::after {
     content: "";
     position: absolute;
-    background-color: #e43d5b;
+    background-color: #182263;
     width: var(--icon-size);
     height: var(--icon-size);
     top: 0;
@@ -6699,7 +6699,7 @@ a.text-white:hover {
 }
 
 .main-menu a:hover {
-    color: var(--theme-color);
+    color:#6169a4;
 }
 
 .main-menu>ul>li {
@@ -6727,7 +6727,6 @@ a.text-white:hover {
 }
 
 .main-menu ul li.menu-item-has-children>a:after {
-    content: "";
     position: relative;
     font-family: var(--icon-font);
     margin-left: 4px;
@@ -6801,7 +6800,6 @@ a.text-white:hover {
 }
 
 .main-menu ul.sub-menu li.menu-item-has-children>a:after {
-    content: "";
     float: right;
     top: 3px;
 }
@@ -10093,7 +10091,7 @@ table.variations .reset_variations {
 
 .login-tab button.nav-link.active {
     background-color: var(--theme-color);
-    color: var(--white-color);
+    color:#283480 ;
 }
 
 .star-rating {
@@ -12969,7 +12967,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .speaker-count {
-    background: linear-gradient(to right, #182263 0%, #182263 100%);
+    background: linear-gradient(to right, #5c1011 0%, #182263 100%);
     padding: 56px 52px;
     position: absolute;
     text-align: center;
