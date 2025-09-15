@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>PANIIT Rising Rajasthan - AN Summit of IIITians to guide the youth</title>
-    <meta name="description" content="Join us at PANIIT Rising Rajasthan 2025, a premier startup summit and entrepreneur conference. Network with IIT alumni, industry leaders, and innovators to explore investment opportunities and drive business growth.">
+    <title>PanIIT Rising Rajasthan ,SAMBHAV 2025- AN Summit of IIITians to guide the youth</title>
+    <meta name="description" content="Join us at PanIIT Rising Rajasthan ,SAMBHAV 20252025, a premier startup summit and entrepreneur conference. Network with IIT alumni, industry leaders, and innovators to explore investment opportunities and drive business growth.">
     <meta name="keywords" content="PANIIT Rising Rajasthan, Startup Summit, Entrepreneur Conference, IIT Alumni, Networking, Industry Leaders, Innovation, Business Growth, Entrepreneurship, Technology, Investment Opportunities">
     <meta name="author" content="PANIIT Rising Rajasthan">
     <link rel="manifest" href="assets/img/favicon.ico">
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/custome.css">
-    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="icon" href="assets/img/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet">
@@ -135,7 +135,7 @@
 <body>
 
 
-    <div id="floater"><a href="https://www.townscript.com/e/paniit-rising-rajasthan2025-121000" target="_blank"><img src="assets/img/tickets.png" alt=""> PAN IIT 25 TICKETS</a>
+    <div id="floater"><a href="https://www.townscript.com/e/paniit-rising-rajasthan2025-121000" target="_blank"><img src="assets/img/tickets.png" alt="">SAMBHAV-2025 TICKETS</a>
     </div>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BSTWRWJ" height="0" width="0"
         style="display:none;visibility:hidden"></iframe></noscript>
@@ -158,7 +158,7 @@
                         <a href="#event-agenda">Event Agenda</a>
                     </li>
                     <li class="menu-item-has-children">
-                        <a href="#pitch">Pitch Now</a>
+                        <a href="#founder-circle">Pitch Now</a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#exhibition">Exhibition</a>
@@ -176,7 +176,7 @@
                         <div class="header-links">
                             <ul class="hul">
                                 <li>
-                                    <marquee>PANIIT Rising Rajasthan 2025</marquee>
+                                    <marquee>PanIIT Rising Rajasthan , SAMBHAV 2025</marquee>
                                 </li>
                             </ul>
                         </div>
@@ -191,7 +191,7 @@
                                         src="assets/img/twitter.png" style="margin-top: -6px; width: 80%"></a></li>
                                 <li><a href="https://www.instagram.com/" target="_blank"><i
                                         class="fab fa-instagram"></i></a></li>
-                                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/paniit-rising-rajasthan-2025" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
                                 <li><a href="https://www.youtube.com/" target="_blank"><i
                                         class="fab fa-youtube"></i></a></li>
                             </ul>
@@ -229,7 +229,7 @@
                                                 <a href="#tracks">Tracks</a>
                                             </li>
                                             <li class="menu-item-has-children">
-                                                <a href="#pitch">Pitch Now</a>
+                                                <a href="#founder-circle">Pitch Now</a>
                                             </li>
                                             <li class="menu-item-has-children">
                                                 <a href="#exhibition">Exhibition</a>
@@ -256,18 +256,35 @@
         </div>
     </header>
      <script>
-  const menuWrapper = document.querySelector(".vs-menu-wrapper");
-  document.querySelectorAll(".vs-menu-toggle").forEach(btn => {
-    btn.addEventListener("click", () => {
-      if(menuWrapper) menuWrapper.classList.toggle("vs-body-visible");
+document.addEventListener('DOMContentLoaded', function () {
+  const menuWrapper = document.querySelector('.vs-menu-wrapper');
+  const body = document.body;
+  const toggles = Array.from(document.querySelectorAll('.vs-menu-toggle'));
+  const menuLinks = Array.from(document.querySelectorAll('.vs-menu-wrapper a'));
+
+  // Initialize aria attributes
+  toggles.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
+
+  toggles.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      // Toggle class on body (and on wrapper for compatibility)
+      const isOpen = body.classList.toggle('vs-body-visible');
+      if (menuWrapper) menuWrapper.classList.toggle('vs-body-visible', isOpen);
+
+      // Update aria-expanded for all toggles
+      toggles.forEach(t => t.setAttribute('aria-expanded', isOpen ? 'true' : 'false'));
     });
   });
 
-  document.querySelectorAll(".vs-menu-wrapper a").forEach(link => {
-    link.addEventListener("click", () => {
-      if(menuWrapper) menuWrapper.classList.remove("vs-body-visible");
+  // Close menu when a link inside the mobile menu is clicked
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      body.classList.remove('vs-body-visible');
+      if (menuWrapper) menuWrapper.classList.remove('vs-body-visible');
+      toggles.forEach(t => t.setAttribute('aria-expanded', 'false'));
     });
   });
+});
 </script>
 
     <style type="text/css">
@@ -366,9 +383,9 @@
                 <div class="vs-hero-bg" data-bg-src="assets/img/banner1.jpg" data-overlay="overlay1" data-opacity="7"></div>
 
                 <div class="hero-content-style4">
-                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s"> PAN IIT Rising Rajasthan SUMMIT 2025</h1>
+                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">PanIIT Rising Rajasthan , SAMBHAV 2025</h1>
 
-                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Showcase. Demo. Meet Investors.
+                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Where Technology Meets Impact.
                         
 
                     <div class="event-info vs-animated slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s;">
@@ -387,9 +404,9 @@
                 <div class="vs-hero-bg" data-bg-src="assets/img/banner2.jpg" data-overlay="overlay1" data-opacity="7"></div>
 
                 <div class="hero-content-style4">
-                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s"> PAN IIT Rising Rajasthan SUMMIT 2025</h1>
+                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">PanIIT Rising Rajasthan , SAMBHAV 2025</h1>
 
-                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Fuelling start-up growth through<br> thought leadership
+                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Where Technology Meets Impact
                     </h2>
                     <div class="event-info vs-animated slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s;">
                         <span><i class="fal fa-calendar-alt"></i>  1<sup>st</sup> NOV, 2025</span>
@@ -407,9 +424,9 @@
 
                 <div class="hero-content-style4">
                     <div class="hero-title eddtion sm-hide" data-ani="slideinup" data-ani-delay="0.4s" style="visibility: hidden;">14<sup>th</sup> Edition</div>
-                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">PAN IIT Rising Rajasthan SUMMIT 2025</h1>
+                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">PAN IIT Rising Rajasthan , SAMBHAV 2025 </h1>
 
-                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Recognising Industry Stalwarts<br> across Industries </h2>
+                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Where Technology Meets Impact </h2>
                     <div class="event-info vs-animated slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s;">
                         <span><i class="fal fa-calendar-alt"></i>  1<sup>st</sup> November, 2025</span>
                         <span><i class="fal fa-map-marker-alt"></i> Rajasthan International Center, Jaipur </span>
@@ -425,9 +442,9 @@
 
                 <div class="hero-content-style4">
                     <div class="hero-title eddtion sm-hide" data-ani="slideinup" data-ani-delay="0.4s" style="visibility: hidden;">14<sup>th</sup> Edition</div>
-                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">PAN IIT SUMMIT 2025</h1>
+                    <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.2s">PanIIT Rising Rajasthan , SAMBHAV 2025</h1>
 
-                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Most Impactful<br> Investor-Mentor-Startup Meet</h2>
+                    <h2 class="hero-title" data-ani="slideinup" data-ani-delay="0.4s">Where Technology Meets Impact</h2>
                     <div class="event-info vs-animated slideinup" data-ani="slideinup" data-ani-delay="0.6s" style="animation-delay: 0.6s;">
                         <span><i class="fal fa-calendar-alt"></i> 1<sup>st</sup> November, 2025</span>
                         <span><i class="fal fa-map-marker-alt"></i> Rajasthan International Center, Jaipur </span>
@@ -469,13 +486,23 @@
                     </div>
                 </div>
                 <div class="col-lg-7 ps-xl-5">
-                    <h2 class="sec-title mb-30">About PAN IIT Rising Rajasthan Summit 2025</h2>
-                    <p class="mb-35 ">Rising Rajasthan’s expo is where startups, corporates, IIT incubators, and innovation labs meet customers, investors and policymakers. Across Exhibition Halls 1 & 2 (and Expo Zone 3), showcase live demos, run product trials, and book meetings with high-intent visitors. <b> PAN IIT Summit 2025</b> Rising Rajasthan’s expo is where startups, corporates, IIT incubators, and innovation labs meet customers, investors and policymakers. Across Exhibition Halls 1 & 2 (and Expo Zone 3), showcase live demos, run product trials, and book meetings with high-intent visitors.
+                    <h2 class="sec-title mb-30">About PanIIT Rising Rajasthan — SAMBHAV</h2>
+                    <p class="mb-3">PanIIT and Rising Rajasthan have come together to create SAMBHAV—a powerful platform where ignited minds, innovators, and leaders unite to shape the future.</p>
+                    <p class="mb-3">Sambhav is designed to be more than an event. It is a confluence of ideas, opportunities, and collaborations—bringing together entrepreneurs, corporates, policymakers, investors, Government, students, and the global IIT alumni network on one stage.</p>
+
+                    <p class="mb-2"><strong>The platform is built to:</strong></p>
+                    <ul class="about-list mb-3">
+                      <li><strong>Inspire Dreamers</strong> – to transform bold visions into real-world impact.</li>
+                      <li><strong>Empower Builders</strong> – to showcase innovation across technology, infrastructure, sustainability, and social impact.</li>
+                      <li><strong>Connect Ecosystems</strong> – enabling meaningful interactions between startups, corporates, investors, and academia.</li>
+                      <li><strong>Celebrate Rajasthan &amp; Beyond</strong> – highlighting the state’s potential while opening pathways for global partnerships.</li>
+                    </ul>
+
+                    <p class="mb-3">By combining the strength of PanIIT’s global alumni network with Rajasthan’s energy and opportunity, SAMBHAV emerges as a movement for sustainable progress—local in spirit, global in reach, and lasting in impact. Here, Ideas ignite, Partnerships form, and the Roadmap to tomorrow begins.</p>
 
                     <div class="btn-group">
                         <a href="https://www.townscript.com/e/paniit-rising-rajasthan2025-121000" target="_blank" class="vs-btn me-4">Buy Tickets Now</a>
-                        <a href="https://youtu.be/MJyJqjqfQWE?si=IYQ7AslaAMuoedae" class="popup-video video-btn"><i class="fas fa-play"></i>Watch
-                        Video</a>
+                        <a href="" class="popup-video video-btn"><i class="fas fa-play"></i>Watch Video</a>
                     </div>
                 </div>
             </div>
@@ -551,6 +578,17 @@
   object-fit: cover;
 }
 
+.about-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.about-list li {
+  margin-bottom: 0.5rem;
+}
+
 @media (max-width: 992px) {
   .about-space {
     padding: 40px 20px;
@@ -596,6 +634,24 @@
   }
 }
 
+/* new: keep about-list readable and responsive */
+.about-content .about-list {
+  list-style: disc;
+  padding-left: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 18px;
+  text-align: left;
+}
+.about-content .about-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .about-content { text-align: center; }
+  .about-content .about-list { padding-left: 1rem; text-align: left; }
+}
 </style>
 
    <style>
@@ -643,12 +699,12 @@ color: #182263;
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="mb-2">Event Agenda</h2>
-      <p>Two days of immersive sessions, networking, and cultural experiences</p>
+      <!-- <p>Two days of immersive sessions, networking, and cultural experiences</p> -->
     </div>
 
     <ul class="nav nav-tabs mb-4" id="agendaTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1" type="button">Day 1 - Sat, 1 Nov 2025</button>
+        <button class="nav-link active" id="day1-tab" data-bs-toggle="tab" data-bs-target="#day1" type="button">Sat, 1 Nov 2025</button>
       </li>
     </ul>
 
@@ -670,7 +726,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">07:00</div>
                 <div class="agenda-title">Registrations & Welcome</div>
-                <div class="agenda-desc">Rajasthani stoles, tote kits, chai/coffee</div>
+                <!-- <div class="agenda-desc">Rajasthani stoles, tote kits, chai/coffee</div> -->
               </div>
             </div>
 
@@ -679,7 +735,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">09:00-10:00</div>
                 <div class="agenda-title">Opening Ceremony</div>
-                <div class="agenda-desc">Folk-fusion, addresses by IIT alumni & state leadership, lamp lighting, AV launch: “Rising Rajasthan: Powered by AI, Driven by Community”</div>
+                <!-- <div class="agenda-desc">Folk-fusion, addresses by IIT alumni & state leadership, lamp lighting, AV launch: “Rising Rajasthan: Powered by AI, Driven by Community”</div> -->
               </div>
             </div>
 
@@ -688,7 +744,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">10:00-11:00</div>
                 <div class="agenda-title">Networking Break</div>
-                <div class="agenda-desc">Chai, coffee, local savories</div>
+                <!-- <div class="agenda-desc">Chai, coffee, local savories</div> -->
               </div>
             </div>
 
@@ -697,7 +753,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">11:00-12:00</div>
                 <div class="agenda-title">Panel 1: AI in Healthcare</div>
-                <div class="agenda-desc">Predictive diagnosis, rural telemedicine, robotic surgeries</div>
+                <!-- <div class="agenda-desc">Predictive diagnosis, rural telemedicine, robotic surgeries</div> -->
               </div>
             </div>
 
@@ -706,7 +762,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">12:15-13:15</div>
                 <div class="agenda-title">Panel 2: Governance & AI</div>
-                <div class="agenda-desc">Policy frameworks; Rajasthan as a governance innovation lab</div>
+                <!-- <div class="agenda-desc">Policy frameworks; Rajasthan as a governance innovation lab</div> -->
               </div>
             </div>
 
@@ -715,7 +771,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">13:00-15:00</div>
                 <div class="agenda-title">Exhibition + Lunch Networking</div>
-                <div class="agenda-desc">Rajasthani delicacies</div>
+                <!-- <div class="agenda-desc">Rajasthani delicacies</div> -->
               </div>
             </div>
 
@@ -723,10 +779,10 @@ color: #182263;
               <div class="agenda-icon bg-dark"><i class="fas fa-shield-alt"></i></div>
               <div>
                 <div class="agenda-time">15:00-16:00</div>
-                <div class="agenda-title">Panel 3: Startups & MSMEs</div>
-                <div class="agenda-desc">
+                <div class="agenda-title">Panel 3: Innovative Startups in AI</div>
+                <!-- <div class="agenda-desc">
             Scaling playbooks, B2B SaaS GTM, capital & customers.
-          </div>
+          </div> -->
               </div>
             </div>
 
@@ -735,7 +791,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">16:15-17:15</div>
                 <div class="agenda-title">Panel 4: AI Smart City & Urban Development</div>
-                <div class="agenda-desc">Traffic, resource allocation, urban safety</div>
+                <!-- <div class="agenda-desc">Traffic, resource allocation, urban safety</div> -->
               </div>
             </div>
 
@@ -744,7 +800,7 @@ color: #182263;
               <div>
                 <div class="agenda-time">17:15</div>
                 <div class="agenda-title">High Tea with Live Music</div>
-                <div class="agenda-desc">Networking and cultural entertainment</div>
+                <!-- <div class="agenda-desc">Networking and cultural entertainment</div> -->
               </div>
             </div>
 
@@ -753,27 +809,47 @@ color: #182263;
 
           <div class="col-lg-4">
             <h3 class="mb-3">Parallel Experiences</h3>
+
             <div class="agenda-card mb-3">
-              <div class="parallel-title">Startup Pitch Arena</div>
-              <div><i class="fas fa-map-pin me-1"></i> Conf Hall 2</div>
-              <div class="agenda-desc">~12 startups, 30-min slots with VCs/accelerators</div>
+              <div class="parallel-title">🚀 Startup Pitch Arena</div>
+              <div class="text-muted small"><i class="fas fa-map-pin me-1"></i> Conference Hall 2</div>
+              <ul class="parallel-list">
+                <li>15 handpicked startups pitching live.</li>
+                <li>30-minute power slots with VCs & accelerators.</li>
+                <li>Real opportunities for funding, mentorship, and scale.</li>
+              </ul>
             </div>
+
             <div class="agenda-card mb-3">
-              <div class="parallel-title">Exhibition Halls 1 & 2</div>
-              <div><i class="fas fa-map-pin me-1"></i> Main Halls</div>
-              <div class="agenda-desc">Startup booths, sponsor activations, AI demos</div>
+              <div class="parallel-title">🌟 Startup &amp; Business Expo</div>
+              <div class="text-muted small"><i class="fas fa-map-pin me-1"></i> Exhibition Halls 1 &amp; 2</div>
+              <ul class="parallel-list">
+                <li>Cutting-edge startup and business stalls &amp; AI showcases.</li>
+                <li>Sponsor activations and live demos.</li>
+                <li>Discover products and technologies shaping the future.</li>
+              </ul>
             </div>
+
             <div class="agenda-card mb-3">
-              <div class="parallel-title">LAN Gaming Arena</div>
-              <div><i class="fas fa-map-pin me-1"></i> Gaming Zone</div>
-              <div class="agenda-desc">Counter-Strike, AOE, NFS (IIT nostalgia)</div>
+              <div class="parallel-title">🎮 LAN Gaming Arena (IIT Nostalgia!)</div>
+              <div class="text-muted small"><i class="fas fa-map-pin me-1"></i> Lecture Room 1</div>
+              <ul class="parallel-list">
+                <li>Relive student days with Counter-Strike, AOE, and NFS.</li>
+                <li>Compete, collaborate, and celebrate IIT gaming culture.</li>
+              </ul>
             </div>
+
             <div class="agenda-card mb-3">
-              <div class="parallel-title">Garden Activations</div>
-              <div><i class="fas fa-map-pin me-1"></i> Outdoor Areas</div>
-              <div class="agenda-desc">Memory Wall, Chai Sutra Corners, Table Tennis, Chill Lounge, AI Photo Pods, Beer Garden</div>
+              <div class="parallel-title">🤝 Networking Lounges</div>
+              <div class="text-muted small"><i class="fas fa-map-pin me-1"></i> Outdoor Areas</div>
+              <ul class="parallel-list">
+                <li>Memory Wall &amp; AI Photo Pods.</li>
+                <li>Chai Sutra Corners &amp; Chill Lounge.</li>
+                <li>Table Tennis, Beer Garden &amp; informal meetups.</li>
+                <li>Build connections that last beyond the event.</li>
+              </ul>
             </div>
-          </div>
+           </div>
         </div>
       </div>
 
@@ -781,7 +857,7 @@ color: #182263;
   </div>
 </section>
 
-    <section id="pitch" class="startup-section">
+    <section id="founder-circle" class="startup-section">
   <div class="startup-wrapper">
 
     <div class="startup-images">
@@ -792,19 +868,20 @@ color: #182263;
     </div>
 
     <div class="startup-content">
-      <img src="assets/img/startup-logo.png" alt="Startup Kickoff" class="startup-logo">
+      <img src="assets/img/startup-logo.png" alt="Founder's Circle" class="startup-logo">
 
-      <h2 class="startup-title">What you get when you apply for Startup Kickoff</h2>
+      <h2 class="startup-title">Join the Founder’s Circle</h2>
+      <p class="startup-text">Every founder knows — it’s not just about the idea, it’s about the people you meet on the journey. By submitting your startup, you’ll:</p>
 
-      <p class="startup-text">
-        An exclusive opportunity to pitch directly to investors, significantly boosting your chances 
-        of securing funding. You’ll have the chance to showcase your startup to a wider audience 
-        and receive a detailed scorecard evaluating the investment potential of your venture or pitch. 
-        The winner will be featured in Entrepreneur magazine and will also receive one delegate pass 
-        to attend the event.
-      </p>
+      <ul class="founder-list">
+        <li>Be in the Right Circle: Connect with ambitious founders solving bold problems.</li>
+        <li>Meet Investors Who Matter: Gain access to curated 1:1 meetings with VCs & accelerators.</li>
+        <li>Build Meaningful Relationships: Surround yourself with peers, mentors, and partners who can accelerate your growth.</li>
+        <li>Stay Top of Mind: Your startup will be part of a selected list shared with investors and ecosystem front runners.</li>
+      </ul>
+      <p class="startup-note">✨ Only shortlisted founders will enter the Speed Dating arena — where real conversations spark real opportunities.</p>
 
-      <a href="#" class="startup-btn">Apply to Pitch</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfcu-5nSlzqtaZolcoRh0oL9l-pvqwzYcYt3h4Ub7iZCWAPJA/viewform?usp=sharing&ouid=116176913109028923678" target="_blank" class="startup-btn">Join the founder’s circle</a>
     </div>
   </div>
 </section>
@@ -876,107 +953,445 @@ color: #182263;
   transition: 0.3s;
 }
 .startup-btn:hover {
-  background: #232535;
+   background:#5c1011;
+  color: #fff;
 }
 
+/* founder circle styles */
+.founder-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 12px 0 6px;
+  color: #182263;
+}
+.founder-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+  margin: 8px 0 12px;
+  color: #333;
+}
+.founder-list li {
+  margin-bottom: 8px;
+  line-height: 1.45;
+  font-size: 15px;
+}
+.startup-note {
+  margin-top: 8px;
+  font-weight: 600;
+  color: #182263;
+}
+
+/* responsive */
 @media (max-width: 768px) {
-  .startup-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+  .founder-heading { font-size: 18px; }
+  .founder-list li { font-size: 14px; }
+  .startup-content { padding: 0 12px; }
 }
 </style>
 
-    <section class="space-shape whyy" data-bg-src="assets/img/bg/feature_bg_1.jpg" data-overlay="black2" data-opacity="8">
-        <div class="container">
-            <div class="title-area2 text-center">
-                <span class="sub-title2 text-white sec-title" style="margin-bottom: 5rem; font-size: xx-large;">
-                Key Highlights of the Event
-                <img class="title-shape" src="assets/img/shape/title_shape.png" alt="title shape">
-            </span>
+    <section class="space-shape whyy highlights-section" data-bg-src="assets/img/bg/feature_bg_1.jpg" data-overlay="black2" data-opacity="8">
+      <div class="container">
+        <div class="title-area2 text-center">
+          <span class="sub-title2 text-white sec-title highlights-title">
+            Key Highlights of the Event
+            <img class="title-shape" src="assets/img/shape/title_shape.png" alt="title shape">
+          </span>
+        </div>
+        <div class="row gy-40 justify-content-center auto-scroll highlights-row">
+          <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+            <div class="feature-card highlight-card">
+              <div class="feature-card_icon highlight-icon">
+                <img src="assets/img/icon/feature_1.png" alt="icon">
+              </div>
+              <h3 class="feature-card_title highlight-card-title">Leaders on Stage</h3>
+              <ul class="feature-card_text highlight-list">
+                <li>Visionary insights from leaders.</li>
+                <li>Actionable growth strategies.</li>
+                <li>Global expert perspectives.</li>
+              </ul>
             </div>
-            <div class="row gy-40 justify-content-center auto-scroll">
-                <div class="col-lg col-sm-auto flex-inline">
-                    <div class="feature-card">
-  <div class="feature-card_icon">
-    <img src="assets/img/icon/feature_1.png" alt="icon">
-  </div>
-  <h3 class="feature-card_title">Conference</h3>
-  <ul class="feature-card_text">
-    <li>Insights from Industry Stalwarts.</li>
-    <li>Fuelling Startup Growth through Thought Leadership.</li>
-  </ul>
-</div>
-
-                </div>
-                <div class="col-lg col-sm-auto flex-inline">
-                    <div class="feature-card">
-                        <div class="feature-card_icon">
-                            <img src="assets/img/icon/feature_2.png" alt="icon">
-                        </div>
-                        <h3 class="feature-card_title">Startups</h3>
-                        <ul class="feature-card_text">
-    <li>Most impactful Investor, Mentor, Startup Meet.</li>
-    <li>Startups Showcase, Demo, Meet Investors.</li>
-  </ul>
-                    </div>
-                </div>
-                <div class="col-lg col-sm-auto flex-inline">
-                    <div class="feature-card">
-                        <div class="feature-card_icon">
-                            <img src="assets/img/icon/feature_3.png" alt="icon">
-                        </div>
-                        <h3 class="feature-card_title">Exhibitions</h3>
-                       <ul class="feature-card_text">
-    <li>SPONSORS & EXHIBITORS Elevate your brand by engaging a discerning audience .</li>
-    <li>Connect & network with Industry leaders, visionaries and policy makers.</li>
-  </ul>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg col-sm-auto flex-inline">
+            <div class="feature-card highlight-card">
+              <div class="feature-card_icon highlight-icon">
+                <img src="assets/img/icon/feature_2.png" alt="icon">
+              </div>
+              <h3 class="feature-card_title highlight-card-title">The Founder’s Arena</h3>
+              <ul class="feature-card_text highlight-list">
+                <li>Direct investor connections.</li>
+                <li>Network with top founders.</li>
+                <li>Startup spotlight & pitches.</li>
+              </ul>
             </div>
+          </div>
+          <div class="col-lg col-sm-auto flex-inline">
+            <div class="feature-card highlight-card">
+              <div class="feature-card_icon highlight-icon">
+                <img src="assets/img/icon/feature_3.png" alt="icon">
+              </div>
+              <h3 class="feature-card_title highlight-card-title">Innovation Showcase</h3>
+              <ul class="feature-card_text highlight-list">
+                <li>Elevate your brand.</li>
+                <li>Engage through live demos.</li>
+                <li>Connect with policymakers.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="shape-mockup jump z-index-3 d-none d-xl-block" data-top="34%" data-left="3%"><img src="assets/img/shape/plane_1.png" alt="shapes"></div>
-        <div class="shape-mockup shapePulse z-index-3 d-none d-xl-block" data-bottom="34%" data-right="3%"><img src="assets/img/shape/power_1.png" alt="shapes"></div>
-        <div class="section-before">
-            <img src="assets/img/shape/curved-shape-top.png" alt="shape">
-        </div>
-        <div class="section-after">
-            <img src="assets/img/shape/curved-shape-bottom.png" alt="shape">
-        </div>
+      </div>
+      <div class="shape-mockup jump z-index-3 d-none d-xl-block" data-top="34%" data-left="3%">
+        <img src="assets/img/shape/plane_1.png" alt="shapes">
+      </div>
+      <div class="shape-mockup shapePulse z-index-3 d-none d-xl-block" data-bottom="34%" data-right="3%">
+        <img src="assets/img/shape/power_1.png" alt="shapes">
+      </div>
+      <div class="section-before">
+        <img src="assets/img/shape/curved-shape-top.png" alt="shape">
+      </div>
+      <div class="section-after">
+        <img src="assets/img/shape/curved-shape-bottom.png" alt="shape">
+      </div>
     </section>
 
-    <section class="about-section" style="background-image: url('assets/img/bg/about_bg_1.png');">
-  <div class="about-wrapper">
+    <style>
+    .highlights-section {
+      position: relative;
+      background: linear-gradient(120deg, #1a1a2e 60%, #283480 100%);
+      background-size: cover;
+      background-position: center;
+      padding: 70px 0 60px 0;
+      overflow: hidden;
+    }
+    .highlights-title {
+      margin-bottom: 3.5rem !important;
+      font-size: 2.3rem !important;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #fff !important;
+      display: inline-block;
+      text-shadow: 0 4px 24px rgba(24,34,99,0.18);
+    }
+    .highlights-row {
+      gap: 36px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .highlight-card {
+      background: rgba(255,255,255,0.07);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(24,34,99,0.10);
+      padding: 38px 28px 32px 28px;
+      min-width: 270px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+      position: relative;
+      z-index: 2;
+      border: 1.5px solid rgba(255,255,255,0.13);
+      backdrop-filter: blur(2px);
+      margin: 0 12px 24px 12px;
+      width: 100%;
+      max-width: 350px;
+      box-sizing: border-box;
+    }
+    .highlight-card:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(24,34,99,0.18);
+    }
+    .highlight-icon {
+      width: 74px;
+      height: 74px;
+      background: linear-gradient(135deg, #283480 60%, #f5b301 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      box-shadow: 0 4px 18px rgba(40,52,128,0.13);
+      border: 3px solid #fff;
+      overflow: hidden;
+    }
+    .highlight-icon img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(24,34,99,0.10));
+    }
+    .highlight-card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 18px;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-shadow: 0 2px 8px rgba(24,34,99,0.10);
+    }
+    .highlight-list {
+      color: #f5e9c7;
+      font-size: 1.04rem;
+      line-height: 1.7;
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+      text-align: left;
+    }
+    .highlight-list li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 10px;
+    }
+    .highlight-list li:before {
+      content: "★";
+      position: absolute;
+      left: 0;
+      color: #f5b301;
+      font-size: 1.1em;
+      top: 1px;
+      opacity: 0.85;
+    }
 
-    <div class="about-images">
-      <div class="about-img"><img src="assets/img/exbs7.jpg" alt="about image"></div>
-      <div class="about-img"><img src="assets/img/exbs4.jpg" alt="about image"></div>
-      <div class="about-img"><img src="assets/img/exb1.jpg" alt="about image"></div>
-      <div class="about-shape"><img src="assets/img/shape/line-12.png" alt="shape"></div>
+    /* Responsive styles */
+    @media (max-width: 991px) {
+      .highlights-section { padding: 48px 0 36px 0; }
+      .highlight-card { min-width: 220px; min-height: 260px; padding: 28px 12px 22px 12px; }
+      .highlights-title { font-size: 1.5rem !important; }
+      .highlights-row { gap: 24px 0; }
+    }
+    @media (max-width: 767px) {
+      .highlights-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
+      .highlight-card {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+        margin: 0 0 20px 0;
+        padding: 18px 8px 16px 8px;
+        min-height: 0;
+      }
+      .highlights-section { padding: 32px 0 18px 0; }
+      .highlights-title { font-size: 1.15rem !important; }
+    }
+    @media (max-width: 600px) {
+      .highlight-icon { width: 54px; height: 54px; }
+      .highlight-icon img { width: 32px; height: 32px; }
+      .highlight-card-title { font-size: 1.08rem; }
+      .highlight-list { font-size: 0.97rem; }
+      .highlights-section { padding: 20px 0 10px 0; }
+    }
+    </style>
+  <section class="exhibition-section" id="exhibition">
+    <div class="exhibition-wrapper">
+      <div class="exhibition-images">
+        <div class="exhibition-img"><img src="assets/img/exbs7.jpg" alt="Exhibition image"></div>
+        <div class="exhibition-img"><img src="assets/img/exbs4.jpg" alt="Exhibition image"></div>
+        <div class="exhibition-img"><img src="assets/img/exb1.jpg" alt="Exhibition image"></div>
+        <div class="exhibition-shape"><img src="assets/img/shape/line-12.png" alt="shape"></div>
+      </div>
+      <div class="exhibition-content">
+        <span class="exhibition-subtitle">Exhibition</span>
+        <h2 class="exhibition-title">Exhibition — Your Spotlight, Your Stage.</h2>
+        <p class="exhibition-text">
+          This is where the buzz happens! At PanIIT Rising Rajasthan, the exhibition floor is packed with startups, investors, innovators, and industry giants—all in one place.
+        </p>
+        <ul class="exhibition-list">
+          <li><strong>Show What You’ve Built:</strong> Demos, products, ideas—get seen by the right crowd.</li>
+          <li><strong>Meet Who Matters:</strong> Investors, mentors, corporates &amp; partners walking the floor.</li>
+          <li><strong>Make Noise, Make Deals:</strong> Network, pitch, and create collaborations on the spot.</li>
+        </ul>
+        <div class="exhibition-logos">
+          <img src="assets/img/exhibit-icons/merc.gif" alt="merc">
+          <img src="assets/img/exhibit-icons/citi.png" alt="citi">
+          <img src="assets/img/exhibit-icons/airtel.gif" alt="airtel">
+          <img src="assets/img/exhibit-icons/dtdc.png" alt="dtdc">
+          <img src="assets/img/exhibit-icons/sbi.gif" alt="sbi">
+          <img src="assets/img/exhibit-icons/sc.gif" alt="sc">
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdfp5fgk6Xe8ws_ttTffpbLr-djnIatuWvZnKcXIrS9n04MdA/viewform?usp=sharing&ouid=116176913109028923678" target="_blank" class="exhibition-btn">BOOK YOUR STALL</a>
+      </div>
     </div>
+  </section>
+  <style>
+  .exhibition-section {
+    background: linear-gradient(120deg, #f9f9f9 60%, #e8eafc 100%);
+    padding: 60px 0 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .exhibition-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .exhibition-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 120px;
+    gap: 14px;
+    position: relative;
+    flex: 1 1 340px;
+    max-width: 420px;
+    min-width: 260px;
+  }
+  .exhibition-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(40,52,128,0.08);
+    background: #fff;
+  }
+  .exhibition-shape {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    justify-self: end;
+    z-index: 1;
+  }
+  .exhibition-shape img {
+    width: 60px;
+    opacity: 0.7;
+  }
+  .exhibition-content {
+    flex: 1 1 380px;
+    max-width: 600px;
+    min-width: 260px;
+    text-align: left;
+    padding: 0 12px;
+  }
+  .exhibition-subtitle {
+    display: inline-block;
+    font-size: 15px;
+    color: #283480;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .exhibition-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #182263;
+    line-height: 1.2;
+  }
+  .exhibition-text {
+    font-size: 1.08rem;
+    color: #444;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .exhibition-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin-bottom: 22px;
+    color: #222;
+  }
+  .exhibition-list li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .exhibition-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+  .exhibition-logos img {
+    height: 38px;
+    width: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(40,52,128,0.08);
+    padding: 4px 10px;
+    transition: transform 0.2s;
+  }
+  .exhibition-logos img:hover {
+    transform: scale(1.08) rotate(-2deg);
+  }
+  .exhibition-btn {
+    display: inline-block;
+    background: #182263;
+    color: #fff;
+    padding: 13px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.08rem;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(40,52,128,0.08);
+  }
+  .exhibition-btn:hover {
+    background: #5c1011;
+    color: #fff;
+    box-shadow: 0 4px 18px rgba(40,52,128,0.13);
+  }
 
-    <div class="about-content">
-      <span class="about-subtitle">Overview</span>
-      <h2 class="about-title">Exhibition</h2>
-      <p class="about-text">
-        PANIIT Rising Rajasthan is a premier platform for showcasing innovation 
-        and entrepreneurship in the region.
-      </p>
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .exhibition-wrapper {
+      flex-direction: column;
+      gap: 32px;
+      padding: 0 10px;
+    }
+    .exhibition-content {
+      text-align: center;
+      padding: 0;
+    }
+    .exhibition-list {
+      text-align: left;
+      margin: 0 auto 18px auto;
+      max-width: 420px;
+    }
+    .exhibition-title {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 600px) {
+    .exhibition-section {
+      padding: 32px 0 18px 0;
+    }
+    .exhibition-images {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 90px 90px;
+      gap: 8px;
+      max-width: 100%;
+      min-width: 0;
+    }
+    .exhibition-img img {
+      border-radius: 8px;
+    }
+    .exhibition-shape img {
+      width: 38px;
+    }
+    .exhibition-title {
+      font-size: 1.08rem;
+    }
+    .exhibition-btn {
+      font-size: 0.98rem;
+      padding: 10px 22px;
+    }
+    .exhibition-logos img {
+      height: 28px;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  }
+  </style>
 
-      <ul class="about-logos">
-        <li><img src="assets/img/exhibit-icons/merc.gif" alt="merc"></li>
-        <li><img src="assets/img/exhibit-icons/citi.png" alt="citi"></li>
-        <li><img src="assets/img/exhibit-icons/airtel.gif" alt="airtel"></li>
-        <li><img src="assets/img/exhibit-icons/dtdc.png" alt="dtdc"></li>
-        <li><img src="assets/img/exhibit-icons/sbi.gif" alt="sbi"></li>
-        <li><img src="assets/img/exhibit-icons/sc.gif" alt="sc"></li>
-      </ul>
-
-      <a href="#" class="about-btn">BOOK YOUR STALL</a>
-    </div>
-
-  </div>
-</section>
 
 <style>
 .about-section {
@@ -985,143 +1400,83 @@ color: #182263;
   padding: 50px 20px;
 }
 
-.about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+/* ...existing about-section styles... */
 
-.about-images {
-  flex: 1 1 300px;
-  max-width: 500px;
-  position: relative;
+/* new: keep about-list readable and responsive */
+.about-content .about-list {
+  list-style: disc;
+  padding-left: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 18px;
+  text-align: left;
 }
-.about-img img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  margin-bottom: 15px;
-}
-.about-shape img {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  width: 100px;
-}
-
-.about-content {
-  flex: 1 1 300px;
-  max-width: 600px;
-  text-align: center;
-}
-.about-subtitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #182263;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-.about-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  line-height: 1.3;
-  word-break: break-word;
-}
-.about-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 25px;
-  word-break: break-word;
-}
-
-.about-logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin: 0 0 25px;
-  padding: 0;
-  list-style: none;
-}
-.about-logos img {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
-
-.about-btn {
-  background: #182263;
-  color: #fff;
-  padding: 12px 30px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.3s;
-}
-.about-btn:hover {
-  background: #501ca8;
+.about-content .about-list li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #222;
 }
 
 @media (max-width: 768px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+  .about-content { text-align: center; }
+  .about-content .about-list { padding-left: 1rem; text-align: left; }
 }
 </style>
-
 <section class="tracks-section" id="tracks">
-  <div class="tracks-container">
-    <h2 class="tracks-heading">Conference Tracks</h2>
-    <p class="tracks-subheading">
-      Six focused tracks exploring how AI and emerging technologies are transforming key sectors
-    </p>
+  <div class="container">
+    <div class="title-area2 text-center mb-4">
+      <span class="sub-title2 sec-title tracks-title">
+        Explore Our Tracks
+        <img class="title-shape" src="assets/img/shape/title_shape.png" alt="title shape">
+      </span>
+      <p class="tracks-desc">Dive into the core themes shaping the future—each track brings together experts, founders, and innovators to spark new ideas and real impact.</p>
+    </div>
 
-    <div class="tracks-grid">
-      <div class="track-card" onclick="openTrackPopup('healthcare-ai')">
-        <div class="track-icon"><i class="fas fa-heart"></i></div>
-        <div>
-          <div class="track-title">Healthcare & AI</div>
-          <div class="track-desc">
-            Predictive diagnostics, telemedicine at scale, mental-health tech, clinical AI.
+    <div class="row gy-40 justify-content-center tracks-row">
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="track-feature-card" onclick="openTrackPopup('healthcare-ai')">
+          <div class="track-feature-icon">
+            <i class="fas fa-heart-pulse" style="color:#e74c3c;font-size:2rem;" aria-hidden="true"></i>
           </div>
+          <h3 class="track-feature-title">Healthcare & AI</h3>
+          <p class="track-desc">
+  Predictive diagnostics, telemedicine at scale, mental health tech, and clinical AI solutions transforming healthcare delivery.
+          </p>
         </div>
       </div>
 
-      <div class="track-card" onclick="openTrackPopup('governance-ai')">
-        <div class="track-icon"><i class="fas fa-building"></i></div>
-        <div>
-          <div class="track-title">Governance & AI</div>
-          <div class="track-desc">
-            Policy frameworks, energy, infra, skilling, and citizen services.
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="track-feature-card" onclick="openTrackPopup('governance-ai')">
+          <div class="track-feature-icon">
+            <i class="fas fa-landmark" style="color:#f5b301;font-size:2rem;" aria-hidden="true"></i>
           </div>
+          <h3 class="track-feature-title">Governance & AI</h3>
+          <p class="track-desc">
+          AI-driven policy frameworks, energy & infra efficiency, citizen services, and digital-first governance for smarter administration.
+          </p>
         </div>
       </div>
 
-      <div class="track-card" onclick="openTrackPopup('smartcities-ai')">
-        <div class="track-icon"><i class="fas fa-microchip"></i></div>
-        <div>
-          <div class="track-title">Smart Cities & Better Living</div>
-          <div class="track-desc">
-            Jaipur/Jodhpur/Udaipur as AI-enabled urban hubs.
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="track-feature-card" onclick="openTrackPopup('smartcities-ai')">
+          <div class="track-feature-icon">
+            <i class="fas fa-city" style="color:#182263;font-size:2rem;" aria-hidden="true"></i>
           </div>
+          <h3 class="track-feature-title">Smart Cities & Better Living</h3>
+          <p class="track-desc">
+            Building AI-enabled hubs in Jaipur, Jodhpur, Udaipur—covering mobility, sustainability, safety, and quality of life.
+          </p>
         </div>
       </div>
 
-      <div class="track-card" onclick="openTrackPopup('startups-ai')">
-        <div class="track-icon"><i class="fas fa-rocket"></i></div>
-        <div>
-          <div class="track-title">Startups & MSMEs</div>
-          <div class="track-desc">
-            Scaling playbooks, B2B SaaS GTM, capital & customers.
+      <div class="col-lg-3 col-md-6 d-flex">
+        <div class="track-feature-card" onclick="openTrackPopup('startups-ai')">
+          <div class="track-feature-icon">
+            <i class="fas fa-rocket" style="color:#27ae60;font-size:2rem;" aria-hidden="true"></i>
           </div>
+          <h3 class="track-feature-title">Innovative Startups in AI</h3>
+          <p class="track-desc">
+            Showcasing disruptive AI ventures—new ideas, scalable models, and breakthrough innovations driving the next wave of entrepreneurship.
+          </p>
         </div>
       </div>
     </div>
@@ -1129,84 +1484,160 @@ color: #182263;
 </section>
 
 <style>
-/* Section Base */
 .tracks-section {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  text-align: center;
+  background: linear-gradient(120deg, #f9f9f9 60%, #e8eafc 100%);
+  padding: 70px 0 50px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.tracks-heading {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
+.tracks-title {
+  margin-bottom: 2.2rem !important;
+  font-size: 2.1rem !important;
+  font-weight: 800;
+  color: #182263 !important;
+  display: inline-block;
+  text-shadow: 0 4px 24px rgba(24,34,99,0.10);
 }
 
-.tracks-subheading {
-  font-size: 16px;
+.tracks-desc {
+  color: #444;
+  font-size: 1.08rem;
+  margin-bottom: 38px;
   max-width: 700px;
-  margin: 0 auto 40px;
-  color: #555;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 1.6;
 }
 
-/* Grid Layout */
-.tracks-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-/* Track Card */
-.track-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+/* row/card layout */
+.tracks-row {
+  gap: 36px 0;
   display: flex;
-  align-items: flex-start;
-  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.track-feature-card {
+  background: rgba(255,255,255,0.93);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(24,34,99,0.08);
+  padding: 32px 18px;
+  min-width: 220px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.22s, box-shadow 0.22s, background 0.22s;
+  position: relative;
+  z-index: 2;
+  border: 1.5px solid rgba(40,52,128,0.10);
+  margin: 0 12px 24px 12px;
+  width: 100%;
+  max-width: 340px;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-.track-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
-.track-icon {
-  font-size: 24px;
-  color: #283480;
-  flex-shrink: 0;
+.track-feature-card:hover {
+  background: #f5f7ff;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(24,34,99,0.13);
 }
 
-.track-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 6px;
+.track-feature-icon {
+  width: 74px;
+  height: 74px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 18px rgba(40,52,128,0.10);
+  border: 3px solid rgba(245,179,1,0.18);
+  overflow: hidden;
 }
 
+.track-feature-title {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #182263;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 0.25px;
+}
+
+/* improved description styling */
 .track-desc {
-  font-size: 14px;
-  line-height: 1.5;
-  color:#1f2c7b;
+  color: #354155;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 28rem;
+  text-align: center;
+  hyphens: auto;
+}
+
+/* list styles (if needed) */
+.track-feature-list {
+  color: #283480;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.track-feature-list li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+
+.track-feature-list li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f5b301;
+  font-size: 1.2em;
+  top: 0;
+  opacity: 0.85;
+}
+
+/* responsive */
+@media (max-width: 991px) {
+  .tracks-section { padding: 48px 0 36px 0; }
+  .tracks-title { font-size: 1.5rem !important; }
+  .tracks-row { gap: 24px 0; }
+  .track-feature-card { min-width: 180px; min-height: 220px; padding: 24px 8px; }
+  .track-feature-title { font-size: 1.05rem; }
+  .track-feature-icon { width: 54px; height: 54px; }
+}
+
+@media (max-width: 767px) {
+  .tracks-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .track-feature-card {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 20px 0;
+    padding: 18px 8px 16px 8px;
+    min-height: 0;
+  }
+  .tracks-section { padding: 32px 0 18px 0; }
+  .tracks-title { font-size: 1.15rem !important; }
 }
 
 @media (max-width: 600px) {
-  .track-card {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  .track-icon {
-    font-size: 28px;
-    margin-bottom: 8px;
-  }
+  .track-feature-icon { width: 46px; height: 46px; }
+  .track-feature-title { font-size: 1rem; }
+  .track-desc { font-size: 0.95rem; max-width: 100%; padding: 0 6px; }
+  .tracks-section { padding: 20px 0 10px 0; }
 }
 </style>
 
@@ -1486,6 +1917,47 @@ color: #182263;
 }
 </style>
 
+<style>
+.meta { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 12px; 
+}
+.meta-info strong { 
+  display:block; 
+  color:#182263; 
+  font-size:15px; 
+}
+.meta-info span { 
+  display:block; 
+  color:#6b6b6b; 
+  font-size:13px; 
+}
+.rating i { 
+  color: #f5b301; 
+  margin-left:4px; 
+}
+
+/* slick custom */
+.testimonials-section .slick-arrow { display:none !important; } /* hide arrows */
+.testimonials-section .slick-dots { margin-top: 22px; }
+.testimonials-section .slick-dots li button:before { font-size: 12px; color: #cfcfe6; }
+.testimonials-section .slick-dots li.slick-active button:before { color: #182263; }
+
+/* Responsive Fix */
+@media (max-width: 992px){ 
+  .testimonials-section{padding:50px 16px} 
+  .testi-card{padding:18px; margin:0 8px;} 
+}
+@media (max-width: 576px){ 
+  .testi-card{flex-direction:column; align-items:center; text-align:center;} 
+  .testi-card .media img{width:64px;height:64px;border-radius:10px} 
+  .testi-card .quote{font-size:14px} 
+  .meta{flex-direction:column; gap:6px;} 
+}
+</style>
+
 <script>
 $(document).ready(function(){
   if($('.testi-slider').length){
@@ -1508,182 +1980,109 @@ $(document).ready(function(){
 </script>
 
 
-    <footer class="footer-wrapper footer-layout4 " data-bg-src="assets/img/footerbg.jpg">
-        <div class="widget-area">
-            <div class="container">
+    <footer class="site-footer">
+      <div class="footer-inner">
+      <div class="footer-col footer-contact" aria-labelledby="footer-contact-heading">
+      <h3 id="footer-contact-heading">Contact</h3>
+      <p>Stall & Sponsorship: <a href="tel:+919887020529">+91 98870 20529</a></p>
+      <p>Ticket Booking: <a href="tel:+917726019877">+91 77260 19877</a></p>
+      <p>Email: <a href="mailto:rajasthan@paniit.org">rajasthan@paniit.org</a></p>
 
-                <div class="row justify-content-between">
-
-                    <div class="col-xl-auto col-md-6 col-lg-4">
-                        <div class="widget footer-widget">
-                            <div class="vs-widget-about">
-                                <div class="mag-right">
-                                    
-                                    <div class="magy">
-                                        <div class="subs-btn">
-                                            <a href="#" target="_blank">Subscribe Now</a>
-                                        </div>
-                                        <div class="mag-txt">
-                                            <p>To Subscribe, <br>Call: <strong>+91 81786 74744</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="vs-social">
-                                    <a href="https://www.facebook.com/" target="_blank"><i
-                              class="fab fa-facebook-f"></i></a>
-                                    <a href="https://twitter.com/" target="_blank"><img src="assets/img/twitter.png"
-                              style="margin-top: -6px;"></a>
-                                    <a href="https://instagram.com" target="_blank"><i
-                              class="fab fa-instagram"></i></a>
-                                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-auto col-md-7 offset-md-3">
-                        <div class="any-issue">
-                            <h3 class="ft-head">For any pending query, please connect to:</h3>
-                            <h4 class="ft-name">PAN IIT </h4>
-                            <p><a href=""><span class="__cf_email__" data-cfemail="">rajasthan@paniit.org</span> </a>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
+      <div class="footer-social" aria-label="Follow us">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter"><img src="assets/img/twitter.png" alt="Twitter" /></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/company/paniit-rising-rajasthan-2025" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <p class="copyright">Copyright © 2025 Pan IIT Rising Rajasthan.</p>
-            </div>
+      </div>
+
+      <div class="footer-col footer-cta" aria-labelledby="footer-cta-heading">
+        <h3 id="footer-cta-heading">Join & Visit</h3>
+        <p>Showcase your brand, meet investors, or join the founder's circle — be part of the impact.</p>
+        <div class="footer-cta-buttons">
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdfp5fgk6Xe8ws_ttTffpbLr-djnIatuWvZnKcXIrS9n04MdA/viewform?usp=sharing" target="_blank" rel="noopener">Book Your Stall</a>
+        <a class="btn btn-outline" href="https://www.townscript.com/e/paniit-rising-rajasthan2025-121000" target="_blank" rel="noopener">Buy Tickets</a>
         </div>
+      </div>
+      </div>
+
+      <div class="footer-bottom">
+      <p>Copyright © 2025 Pan IIT Rising Rajasthan. All rights reserved.</p>
+      </div>
+
+      <a href="#" class="scrollToTop" aria-label="Scroll to top"><i class="far fa-long-arrow-up" aria-hidden="true"></i></a>
+
+      <style>
+      /* Themed footer aligned with site colors */
+      .site-footer {
+        background: linear-gradient(180deg,#1a2347 0%, #182263 100%);
+        color: #eef5ff;
+        padding: 44px 18px 18px;
+        font-family: Inter, Roboto, Arial, Helvetica, sans-serif;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+      }
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .footer-col { flex: 1 1 320px; min-width: 240px; }
+      .footer-col h3 { color: #fff; margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: .2px; }
+      .footer-contact p { margin: 6px 0; color: #dbe9ff; font-size: 15px; }
+      .footer-contact a { color: #fff; text-decoration: none; font-weight: 700; }
+      .footer-contact a:hover { text-decoration: underline; color: #92363f; }
+
+      .footer-social { margin-top:12px; display:flex; gap:10px; align-items:center; }
+      .footer-social a {
+        display:inline-flex; align-items:center; justify-content:center;
+        width:38px; height:38px; border-radius:8px;
+        background: rgba(255,255,255,0.04); color:#fff; text-decoration:none;
+        transition: transform .15s, background .15s;
+      }
+      .footer-social a:hover { transform: translateY(-3px); background: rgba(255,255,255,0.08); }
+      .footer-social img { height:20px; width:auto; display:block; }
+
+      .footer-cta p { color:#dbe9ff; margin-bottom:14px; font-size:15px; }
+      .footer-cta-buttons { display:flex; gap:10px; flex-wrap:wrap; }
+
+      .btn {
+        background: linear-gradient(90deg,#5c1011 0%, #7a1a1a 100%);
+        color: #fff; padding:10px 16px; border-radius:28px; text-decoration:none;
+        font-weight:800; font-size:14px; box-shadow: 0 8px 22px rgba(92,16,17,0.14);
+        border: none;
+      }
+      .btn:focus { outline: 3px solid rgba(24,34,99,0.18); outline-offset: 2px; }
+      .btn-outline {
+        background: transparent; border: 1.5px solid rgba(255,255,255,0.12); color:#fff;
+        box-shadow: none; font-weight:700;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.04);
+        margin-top:22px; padding-top:14px; text-align:center; color:#cbdcff; font-size:13px;
+      }
+
+      .scrollToTop {
+        position: fixed; right: 18px; bottom: 18px;
+        background: #283480; color: #fff; border-radius:50%;
+        width:44px; height:44px; display:flex; align-items:center; justify-content:center;
+        text-decoration:none; box-shadow:0 10px 26px rgba(24,34,99,0.18); z-index:999;
+        transition: transform .15s;
+      }
+      .scrollToTop:hover { transform: translateY(-4px); }
+
+      @media (max-width: 900px) {
+        .footer-inner { flex-direction: column; gap:18px; align-items:stretch; }
+        .footer-col { min-width: unset; }
+        .scrollToTop { right: 12px; bottom: 12px; width:40px; height:40px; }
+      }
+      </style>
     </footer>
-
-    <footer class="footer-wrapper footer-layout4 lg-hide d-none" data-bg-src="assets/img/footerbg.jpg">
-        <div class="widget-area">
-            <div class="container">
-
-                <div class="row justify-content-between">
-
-                    <div class="col-xl-auto col-md-6 col-lg-4">
-                        <div class="widget footer-widget">
-                            <div class="vs-widget-about">
-                                <div class="mag-right">
-                                    <a href="https://www.entrepreneurindia.com/emagazine/ " target="_blank"><img
-                              src="https://www.entrepreneurindia.com/assets/img/mag.gif"></a>
-                                    <div class="magy">
-                                        <div class="subs-btn">
-                                            <a href="https://www.entrepreneurindia.com/emagazine/ " target="_blank">Subscribe Now</a>
-                                        </div>
-                                        <div class="mag-txt">
-                                            <p>To Subscribe, <br>Call: <strong>+91 9311148342</strong></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="vs-social">
-                                    <a href="https://www.facebook.com/EntrepreneurInd/" target="_blank"><i
-                              class="fab fa-facebook-f"></i></a>
-                                    <a href="https://twitter.com/EntrepreneurIND/" target="_blank"><img src="assets/img/twitter.png"
-                              style="margin-top: -6px;"></a>
-                                    <a href="https://instagram.com/EntrepreneurIND" target="_blank"><i
-                              class="fab fa-instagram"></i></a>
-                                    <a href="https://www.linkedin.com/company/entrepreneur-media-india/mycompany/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class=" row slider-shadow vs-carousel" id="foot" data-slide-show="4" data-lg-slide-show="3" data-sm-slide-show="2" data-arrows="true">
-
-                        <div class="col-xl-auto col-md-6 col-lg-4">
-                            <h3 class="ft-head"> Exhibition</h3>
-
-                            <h4 class="ft-name">Anisha</h4>
-                            <h5 class="ft-number"><a href="tel:+919686728005">+91 9686728005</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a></p>
-                            <h4 class="ft-name">Eti</h4>
-                            <h5 class="ft-number"><a href="tel:+919266330174">+91 9266330174</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a></p>
-                            <br>
-                            <div class="ft-region" style="
-                  font-weight: bold; text-transform: uppercase;
-                  "><span style="color:yellow; margin-bottom: 10px">
-                        <sapn style="color: #fff"> </sapn> Startup
-                     </span> <span style="color: #ff0017;font-size: 17px;">Kickoff</span> </div>
-
-                            <h4 class="ft-name">AMIT</h4>
-                            <h5 class="ft-number"><a href="tel:+918595350505">+91 8595350505</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span>
-                     </a></p>
-
-                            <div class="sp"></div>
-                        </div>
-                        <!-- Footer Widget-->
-                        <div class="col-xl-auto col-md-6 col-lg-4">
-                            <h3 class="ft-head">Brand Integration</h3>
-                            <h4 class="ft-name">ANKUR </h4>
-                            <h5 class="ft-number"><a href="tel:+919711886970">+91 9711886970</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a>
-                            </p>
-                            <br>
-                            <h3 class="ft-head">Awards</h3>
-                            <h4 class="ft-name">Prateek </h4>
-                            <h5 class="ft-number"><a href="tel:+916354604762">+91 6354604762</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span> </a></p>
-                            <br>
-                            <h3 class="ft-head">Partnership</h3>
-                            <h4 class="ft-name">Pankaj</h4>
-                            <h5 class="ft-number">+91 7838594787</h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a>
-                            </p>
-
-                            <div class="sp"></div>
-                        </div>
-
-                        <div class="col-xl-auto col-md-6 col-lg-4">
-                            <h3 class="ft-head">Sponsorship</h3>
-                            <h4 class="ft-name">Pawan</h4>
-                            <h5 class="ft-number"><a href="tel:+919343634792">+91 9343634792</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a>
-                            </p><br>
-                            <h3 class="ft-head">Delegate</h3>
-                            <h4 class="ft-name">Sidhant</h4>
-                            <h5 class="ft-number"><a href="tel:+918800638077">+91 8800638077</a></h5>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a></p>
-                            <br>
-
-                            <h3 class="ft-head">Speaker Opportunity</h3>
-                            <h4 class="ft-name">Punita</h4>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span></a>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-xl-auto col-md-7 offset-md-3 mo-40">
-                        <div class="any-issue">
-                            <h3 class="ft-head">For any pending query, please connect to:</h3>
-                            <h4 class="ft-name">Preetima </h4>
-                            <p><a href="#"><span class="__cf_email__" data-cfemail="">[email&#160;protected]</span> </a>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <p class="copyright">Copyright © 2025 Entrepreneur India Media Pvt. Ltd.</p>
-            </div>
-        </div>
-
-
-    </footer> <a href="#" class="scrollToTop scroll-btn"><i class="far fa-long-arrow-up"></i></a>
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/js/jquery-3.5.0.min.js"></script>
@@ -1766,7 +2165,7 @@ $(document).ready(function(){
                     address: "required",
                     promoter: "required",
                     establishment: "required"
-                },
+                }, // <-- add this comma after closing the rules object
                 messages: {
                     organization: 'Please enter organization',
                     email: { required: "Please enter email address", email: "Please enter valid email address" },
@@ -1788,4 +2187,14 @@ $(document).ready(function(){
         Fancybox.bind("[data-fancybox]", {});
     </script>
 
+    <!-- Testimonials Section -->
+    <!-- Testimonials Section -->
+    <!-- removed unused code blocks: captcha generation, myModals handlers, several unused jQuery change handlers, pinCode, spk24 carousel init, anyCheck -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script type="text/javascript">
+        Fancybox.bind("[data-fancybox]", {});
+    </script>
+
+    <!-- Testimonials Section -->
     <!-- Testimonials Section -->

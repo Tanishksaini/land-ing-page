@@ -2838,7 +2838,7 @@ textarea.form-control.is-invalid {
 
 .vs-btn {
     background-color: #182263;
-    background-image: linear-gradient(to right, #5c1011, #651819, #182263, #182263);
+    background-image: linear-gradient(to right, #182263, #182263, #5c1011, #651819);
     background-size: 300% 100%;
     /*-webkit-box-shadow: 0px 11px 21px 0px rgba(240, 64, 27, 0.31);
   box-shadow: 0px 11px 21px 0px rgba(240, 64, 27, 0.31);*/
